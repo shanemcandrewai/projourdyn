@@ -7,10 +7,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const config = {
   entry: resolve(__dirname, 'src/js/main.js'),
+
   output: {
     filename: '[name].js',
     path: resolve(__dirname, 'dist'),
-    // clean: true,
+    library: {
+      type: 'module',
+    },
   },
   devServer: {
     static: resolve(__dirname, 'dist'),
@@ -66,6 +69,7 @@ const config = {
   },
   experiments: {
     topLevelAwait: true,
+    outputModule: true,
   },
 };
 
