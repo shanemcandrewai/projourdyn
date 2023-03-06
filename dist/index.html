@@ -3,38 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BProJourDyn: Project Journaling client-side dynamic web page </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Bootstrap Sass &amp; ESM JS</title>
     <script type="importmap">
     {
       "imports": {
-        "@popperjs/core": "./libs/@popperjs/core/dist/esm/index.js",
-        "bootstrap": "./libs/bootstrap/dist/js/bootstrap.bundle.js"
+        "@popperjs/core": "./libs/@popperjs/core/dist/esm/popper.js",
+        "bootstrap": "./libs/bootstrap/dist/js/bootstrap.esm.js"
       }
     }
-    </script>	
-	<script type="module" src="./main.js"></script>
-    <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.css">
+    </script>
+    <script type="module" src="js/main.js"></script>	
   </head>
   <body>
     <div class="container py-4 px-3 mx-auto">
+
       <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
         <h1 class="h4">
           <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img class="d-inline-block me-2" width="40" height="32" src="https://icons.getbootstrap.com/assets/icons/bootstrap-fill.svg" alt="Bootstrap">
-            <span>Webpack</span>
+            <img class="d-inline-block me-2" width="40" height="32" src="https://raw.githubusercontent.com/twbs/bootstrap/main/site/static/docs/5.3/assets/brand/bootstrap-logo-black.svg" alt="Bootstrap">
+            <span>Sass &amp; ESM JS</span>
           </a>
         </h1>
-        <a href="https://github.com/twbs/examples/tree/main/webpack/" target="_blank" rel="noopener">View on GitHub</a>
+        <a href="https://github.com/twbs/examples/tree/main/sass-js-esm/" target="_blank" rel="noopener">View on GitHub</a>
       </header>
 
-      <h1>Build Bootstrap with Webpack</h1>
+      <h1>Get started with Bootstrap</h1>
       <div class="col-lg-8 px-0">
-        <p class="fs-4">You've successfully loaded the Bootstrap + Webpack example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and uses Webpack to compile and bundle our Sass and JavaScript. It also includes Autoprefixer.</p>
+        <p class="fs-4">You've successfully loaded up a Bootstrap example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a>, Sass, and <a href="https://github.com/guybedford/es-module-shims">ES Modules Shims</a> for our JavaScript plugins.</p>
         <p>If this button appears blue and the link appears purple, you've done it!</p>
       </div>
 
       <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
+      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This popover is created thanks to an ESM shim.">Example popover</a>
 
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
@@ -62,18 +63,20 @@
 
       <h2>Guides</h2>
       <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-      <div class="list-group">
-        <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" class="list-group-item list-group-item-action">Bootstrap quick start guide</a>
-        <a href="https://getbootstrap.com/docs/5.2/getting-started/webpack/" class="list-group-item list-group-item-action">Bootstrap Webpack guide</a>
-        <a href="https://getbootstrap.com/docs/5.2/getting-started/parcel/" class="list-group-item list-group-item-action">Bootstrap Parcel guide</a>
-        <a href="https://getbootstrap.com/docs/5.2/getting-started/vite/" class="list-group-item list-group-item-action">Bootstrap Vite guide</a>
-        <a href="https://getbootstrap.com/docs/5.2/getting-started/build-tools/" class="list-group-item list-group-item-action">Contributing to Bootstrap</a>
-      </div>
+      <ul class="icon-list">
+        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap quick start guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/parcel/">Bootstrap Parcel guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/vite/">Bootstrap Vite guide</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/build-tools/">Contributing to Bootstrap</a></li>
+      </ul>
 
       <hr class="mt-5 mb-4">
 
       <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
     </div>
+
+    <!-- <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.5/dist/es-module-shims.js"></script> -->
 
   </body>
 </html>
