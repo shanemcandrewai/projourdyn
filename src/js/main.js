@@ -7,9 +7,9 @@ import Edge from './Edge.js';
 log.setLevel('info', true);
 
 const selectElement = document.querySelector('#floatingInput');
+const result = document.querySelector('#floatingOutput');
 
 selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('#floatingOutput');
   result.textContent = `You like ${event.target.value}`;
 });
 
@@ -32,6 +32,23 @@ class Dag {
   }
 
   getEdge = (edgeInd) => this.#edges[edgeInd];
+
+  getJSON = () => JSON.stringify({
+    nodes: this.#nodes.reduce((acc, node) => {
+      acc.push({
+        descrComp: node.descrComp,
+        lenComp: node.lenComp,
+      });
+      return acc;
+    }, []),
+    edges: this.#edges.reduce((acc, edge) => {
+      acc.push({
+        fromNode: this.#nodes.findIndex((node) => node === edge.fromNode),
+        toNode: this.#nodes.findIndex((node) => node === edge.toNode),
+      });
+      return acc;
+    }, []),
+  }, null, ' ');
 }
 
 const dag = new Dag();
@@ -39,4 +56,9 @@ const dag = new Dag();
 log.info(
   dag.getEdge(0).fromNode.descr === 'smdb',
   "dag.getEdge(0).fromNode.descr === 'smdb'",
+);
+result.textContent = dag.getJSON();
+log.info(
+  result.textContent.length === 282,
+  'result.textContent.length === 282',
 );
