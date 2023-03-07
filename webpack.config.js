@@ -11,9 +11,7 @@ const config = {
   output: {
     filename: '[name].js',
     path: resolve(__dirname, 'dist'),
-    library: {
-      type: 'module',
-    },
+    module: true,
   },
   devServer: {
     static: resolve(__dirname, 'dist'),
