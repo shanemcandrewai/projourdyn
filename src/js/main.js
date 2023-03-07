@@ -4,6 +4,8 @@ import log from 'loglevel';
 import Node from './Node.js';
 import Edge from './Edge.js';
 
+log.setLevel('info', true);
+
 const selectElement = document.querySelector('#floatingInput');
 
 selectElement.addEventListener('change', (event) => {
@@ -28,11 +30,13 @@ class Dag {
       new Edge(this.#nodes[0], this.#nodes[2]),
     ];
   }
+
+  getEdge = (edgeInd) => this.#edges[edgeInd];
 }
 
 const dag = new Dag();
 
 log.info(
-  dag.addNodeEdge('test', 3) === -1,
-  "dag.addNodeEdge('test', 3) === -1,",
+  dag.getEdge(0).fromNode.descr === 'smdb',
+  "dag.getEdge(0).fromNode.descr === 'smdb'",
 );

@@ -10,7 +10,7 @@ export default class Node {
         this.descr.length,
         outBuffer,
       );
-      this.descrComp = Buffer.from(outBuffer.slice(0, this.lenComp)).toString('base64');
+      this.descrComp = btoa(String.fromCharCode(...outBuffer.slice(0, this.lenComp)));
     }
   }
 
