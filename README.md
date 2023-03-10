@@ -1,13 +1,16 @@
 # ProJourDyn
 ## Project Journaling client-side dynamic web page 
-Manipulate a nested JSON stucture purely with client side scripting. Bootstrap will be the frontend toolkit bundled with webpack
-
+Manipulate a nested JSON stucture purely with client side scripting. 
 ### Features
-#### Initial goals
-- JSON file manually synchronised to cloud storage interface with ProJourDyn via copy and paste into upper [`<textarea>`](https://getbootstrap.com/docs/5.2/forms/floating-labels/#textareas) element
-- Control via manually input of lower `<textarea>` element
-- Control feedback via [floating labels](https://getbootstrap.com/docs/5.2/forms/floating-labels/)
-#### Next goals
+- Control via manually input of upper/right input `<textarea>` element
+- feedback via lower/left output `<textarea>` element
+### Libraries
+- UI : Bootstrap 
+- Module bundler : webpack
+### To do
+- Combine private variables to `this.#dag`
+- `Node.descr` string compression to `Node.descrComp`
+- `Node.descrComp` string decompression to `Node.descr`
+- parce input to `this.#dag`
 - JSON file automatically synchronised cloud storage such as dropbox
 - Control to switch tabular edit mode and reverse
-- Field string compression
