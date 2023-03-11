@@ -8,7 +8,6 @@ Manipulate a nested JSON stucture purely with client side scripting.
 - UI : Bootstrap 
 - Module bundler : webpack
 ### To do
-- Combine private variables to `this.#dag`
 - `Node.descr` string compression to `Node.descrComp`
 - `Node.descrComp` string decompression to `Node.descr`
 - parce input to `this.#dag`

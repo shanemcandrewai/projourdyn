@@ -14,37 +14,35 @@ selectElement.addEventListener('change', (event) => {
 });
 
 class Dag {
-  #nodes;
-
-  #edges;
+  #dag = { nodes: {}, edges: {} };
 
   constructor(nodes, edges) {
-    this.#nodes = nodes || [
+    this.#dag.nodes = nodes || [
       new Node('smdb'),
       new Node('todo'),
       new Node('agenda'),
     ];
 
-    this.#edges = edges || [
-      new Edge(this.#nodes[0], this.#nodes[1]),
-      new Edge(this.#nodes[0], this.#nodes[2]),
+    this.#dag.edges = edges || [
+      new Edge(this.#dag.nodes[0], this.#dag.nodes[1]),
+      new Edge(this.#dag.nodes[0], this.#dag.nodes[2]),
     ];
   }
 
-  getEdge = (edgeInd) => this.#edges[edgeInd];
+  getEdge = (edgeInd) => this.#dag.edges[edgeInd];
 
   getJSON = () => JSON.stringify({
-    nodes: this.#nodes.reduce((acc, node) => {
+    nodes: this.#dag.nodes.reduce((acc, node) => {
       acc.push({
         descrComp: node.descrComp,
         lenComp: node.lenComp,
       });
       return acc;
     }, []),
-    edges: this.#edges.reduce((acc, edge) => {
+    edges: this.#dag.edges.reduce((acc, edge) => {
       acc.push({
-        fromNode: this.#nodes.findIndex((node) => node === edge.fromNode),
-        toNode: this.#nodes.findIndex((node) => node === edge.toNode),
+        fromNode: this.#dag.nodes.findIndex((node) => node === edge.fromNode),
+        toNode: this.#dag.nodes.findIndex((node) => node === edge.toNode),
       });
       return acc;
     }, []),
