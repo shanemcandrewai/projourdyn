@@ -11,6 +11,7 @@
         "sourceType": "module"
     },
     "rules": {
-		"import/extensions": ["error", { "js": "ignorePackages" }]
+		"import/extensions": ["error", { "js": "ignorePackages" }],
+		"no-bitwise": "off"
     }
 }
