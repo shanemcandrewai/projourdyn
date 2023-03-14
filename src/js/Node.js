@@ -1,4 +1,5 @@
 import * as usx from 'unishox2.siara.cc';
+import { Buffer } from 'node:buffer';
 
 export default class Node {
   constructor(descr) {
@@ -10,7 +11,7 @@ export default class Node {
         this.descr.length,
         outBuffer,
       );
-      this.descrComp = btoa(String.fromCharCode(...outBuffer.slice(0, this.lenComp)));
+      this.descrComp = Buffer.from(...outBuffer.slice(0, this.lenComp)).toString('base64');
     }
   }
 

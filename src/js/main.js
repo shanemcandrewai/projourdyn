@@ -49,15 +49,16 @@ class Dag {
       return acc;
     }, []),
   }, null, ' ');
-  
-  loadText = (input) => {
-    const inp = JSON.parse(input);
-    this.#nodes = inp.nodes.reduce((acc, node) => {
+
+  loadText = (inp) => {
+    const inpp = JSON.parse(inp);
+    this.#nodes = inpp.nodes.reduce((acc, node) => {
       const n = new Node();
       n.load(node.descrComp, node.lenComp);
       acc.push(n);
+      return acc;
     }, []);
-  };  
+  };
 }
 
 const dag = new Dag();
@@ -75,8 +76,8 @@ log.info(
 
 input.textContent = dag.getJSON();
 dag.loadText(input.textContent);
-log.info("dag.loadText(input.textContent)");
-log.info(  
+log.info('dag.loadText(input.textContent)');
+log.info(
   dag.getEdge(0).fromNode.descr === 'smdb',
   "dag.getEdge(0).fromNode.descr === 'smdb'",
 );
