@@ -34,8 +34,7 @@ class Dag {
   getJSON = () => JSON.stringify({
     nodes: this.#dag.nodes.reduce((acc, node) => {
       acc.push({
-        descrComp: node.descrComp,
-        lenComp: node.lenComp,
+        descrB64: node.descrB64,
       });
       return acc;
     }, []),
@@ -57,6 +56,5 @@ log.info(
 );
 result.textContent = dag.getJSON();
 log.info(
-  result.textContent.length === 282,
-  'result.textContent.length === 282',
+  result.textContent,
 );
