@@ -46,6 +46,11 @@ class Dag {
       return acc;
     }, []),
   }, null, ' ');
+
+  putJSON = (text) => {
+    this.#dag = JSON.parse(text);
+    return text.length;
+  };
 }
 
 const dag = new Dag();
@@ -56,5 +61,14 @@ log.info(
 );
 result.textContent = dag.getJSON();
 log.info(
-  result.textContent,
+  result.textContent.length === 221,
+  'result.textContent.length === 221',
+);
+log.info(
+  dag.putJSON('{"a":1}') === 7,
+  "dag.putJSON('{'a':1}') === 7",
+);
+log.info(
+  dag.putJSON(result.textContent) === 221,
+  'dag.putJSON(result.textContent) === 221',
 );
