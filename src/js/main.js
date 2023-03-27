@@ -47,9 +47,23 @@ class Dag {
     }, []),
   }, null, ' ');
 
-  putJSON = (text) => {
-    this.#dag = JSON.parse(text);
-    return text.length;
+  putJSON = (textContent) => {
+    const textJSON = JSON.parse(textContent);
+    this.#dag.nodes = textJSON.nodes.reduce((acc, node) => {
+      if (Object.hasOwn(node, 'descr')) {
+        acc.push(new Node(node.descr));
+      } else {
+        const n = new Node();
+        n.loadB64(node.descrB64);
+        acc.push(n);
+      }
+      return acc;
+    }, []);
+    this.#dag.edges = textJSON.edges.reduce((acc, edge) => {
+      acc.push(new Edge(this.#dag.nodes[edge.fromNode], this.#dag.nodes[edge.toNode]));
+      return acc;
+    }, []);
+    return textContent.length;
   };
 }
 
@@ -64,10 +78,10 @@ log.info(
   result.textContent.length === 221,
   'result.textContent.length === 221',
 );
-log.info(
-  dag.putJSON('{"a":1}') === 7,
-  "dag.putJSON('{'a':1}') === 7",
-);
+// log.info(
+// dag.putJSON('{"a":1}') === 7,
+// "dag.putJSON('{'a':1}') === 7",
+// );
 log.info(
   dag.putJSON(result.textContent) === 221,
   'dag.putJSON(result.textContent) === 221',
