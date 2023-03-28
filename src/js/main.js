@@ -78,10 +78,10 @@ log.info(
   result.textContent.length === 221,
   'result.textContent.length === 221',
 );
-// log.info(
-// dag.putJSON('{"a":1}') === 7,
-// "dag.putJSON('{'a':1}') === 7",
-// );
+log.info(
+  dag.putJSON('{"nodes":[{"descrB64":"c21kYg=="},{"descrB64":"dG9kbw=="}],"edges":[{"fromNode":0,"toNode":1}]}') === 95,
+  "dag.putJSON('{nodes:[{descrB64:c21kYg==},{descrB64:dG9kbw==}],edges:[{fromNode:0,toNode:1}]}') === 95",
+);
 log.info(
   dag.putJSON(result.textContent) === 221,
   'dag.putJSON(result.textContent) === 221',
