@@ -90,3 +90,7 @@ log.info(
   dag.putJSON(result.textContent) === 221,
   'dag.putJSON(result.textContent) === 221',
 );
+log.info(
+  dag.getEdge(1).fromNode.descr === 'agenda',
+  "dag.getEdge(1).fromNode.descr === 'agenda'",
+);
