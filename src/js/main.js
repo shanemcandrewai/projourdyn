@@ -79,8 +79,12 @@ log.info(
   'result.textContent.length === 221',
 );
 log.info(
-  dag.putJSON('{"nodes":[{"descrB64":"c21kYg=="},{"descrB64":"dG9kbw=="}],"edges":[{"fromNode":0,"toNode":1}]}') === 95,
+  dag.putJSON('{"nodes":[{"descrB64":"dHR0"},{"descrB64":"dG9kbw=="}],"edges":[{"fromNode":0,"toNode":1}]}') === 91,
   "dag.putJSON('{nodes:[{descrB64:c21kYg==},{descrB64:dG9kbw==}],edges:[{fromNode:0,toNode:1}]}') === 95",
+);
+log.info(
+  dag.getEdge(0).fromNode.descr === 'ttt',
+  "dag.getEdge(0).fromNode.descr === 'ttt'",
 );
 log.info(
   dag.putJSON(result.textContent) === 221,
