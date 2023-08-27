@@ -6,9 +6,13 @@ log.enableAll();
 
 const app = express();
 const port = process.env.PORT || 3000;
-app.use(express.static('public'));
+app.use(express.static('pub'));
+app.use(express.static('test'));
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve('public/index.html'));
+  res.sendFile(path.resolve('pub/index.html'));
+});
+app.get('/test', (req, res) => {
+  res.sendFile(path.resolve('pub/test/test.html'));
 });
 
 app.listen(port, () => {
