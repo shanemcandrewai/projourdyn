@@ -2,13 +2,12 @@
   display: flex;
 }
 .column {
-  flex: 50%;
-  padding: 16px;
-  height: 250px;
+  padding: 5px;
+  background: bisque;
 }
 body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+  /* width: 50%; */
+  /* margin: 2em auto; */
+  font: 12px sans-serif;
+  background: antiquewhite;
 }
