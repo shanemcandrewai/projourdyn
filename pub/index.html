@@ -2,18 +2,35 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>File(s) size</title>
+    <link href="main.css" rel="stylesheet" />
     <script src="js/upload.js"></script>
   </head>
 
   <body>
     <form name="uploadForm">
-      <div>
-        <input id="uploadInput" type="file" multiple />
-        <label for="fileNum">Selected files:</label>
-        <output id="fileNum">0</output>;
-        <label for="fileSize">Total size:</label>
-        <output id="fileSize">0</output>
+      <div class="row">
+        <div class="column">
+          <input id="uploadInput" type="file" multiple />
+        </div>
+        <div class="column">
+          <label for="fileNum">Selected files:</label>
+          <output id="fileNum">0</output>;
+          <label for="fileSize">Total size:</label>
+          <output id="fileSize">0</output>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <input id="uploadInput" type="file" multiple />
+        </div>
+        <div class="column">
+          <label for="fileNum">Selected files:</label>
+          <output id="fileNum">0</output>;
+          <label for="fileSize">Total size:</label>
+          <output id="fileSize">0</output>
+        </div>
       </div>
     </form>
   </body>
