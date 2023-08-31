@@ -11,3 +11,7 @@ Manipulate a nested JSON stucture purely with client side scripting.
     npx nodemon server.js
 #### Run Tests
     nagivate to http://localhost:3000/test
+#### Nopepad++ copy line under cursor
+    CTRL-SHFT-X
+	
+	
