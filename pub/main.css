@@ -1,32 +1,26 @@
-body {
-  font: 12px sans-serif;
-  background: antiquewhite;
+.ui {
+  font: 0.875rem Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  background-color: beige;
 }
 
 button {
-  width: 5em;
+  width: 4rem;
 }
 
-.row,
 .row-file,
 .row-button {
-  background: azure;
+  background-color: azure;
   display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
 }
 
-.row-file {
-}
-
-.row-button {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.row {
+.record {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-.column,
-.column-label {
-  padding: 1em;
-  background: bisque;
+  margin: 0.5rem;
+  background-color: bisque;
 }

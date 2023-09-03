@@ -9,56 +9,35 @@
   </head>
 
   <body>
-    <div class="row-file">
-      <div class="column">
+    <div class="ui">
+      <div class="row-file">
         <input id="uploadInput" type="file" multiple />
+        <input type="text" maxlength="80" />
       </div>
-      <div class="column">
-        <input type="text" size="10" maxlength="80" />
-      </div>
-    </div>
-    <div class="row-button">
-      <div class="column">
+      <div class="row-button">
         <button type="button">insert</button>
-      </div>
-      <div class="column">
         <button type="button">update</button>
-      </div>
-      <div class="column">
         <button type="button">delete</button>
-      </div>
-      <div class="column">
         <button type="button">filter</button>
       </div>
-    </div>
-    <div class="row-button">
-      <div class="column">
+      <div class="row-button">
         <button type="button">next</button>
-      </div>
-      <div class="column">
         <button type="button">previous</button>
-      </div>
-      <div class="column">
         <button type="button">up</button>
-      </div>
-      <div class="column">
         <button type="button">down</button>
       </div>
-    </div>
-    <div class="row">
-      <div class="column-label">id</div>
-      <div class="column-label">type</div>
-      <div class="column-label">prio</div>
-      <div class="column-label">created</div>
-      <div class="column-label">due</div>
-      <div class="column-label">descr</div>
-    </div>
-    <div class="row">
-      <div class="column-label">id</div>
-      <div class="column-label">created</div>
-      <div class="column-label">t</div>
-      <div class="column-label">descr</div>
-      <div class="column-label">r3c2</div>
+      <div class="record">
+        <label for="id">ID: </label>
+        <input id="id" type="number" max="99999" />
+        <label for="created">Created: </label>
+        <input id="created" type="date" />
+        <label for="priority">Priority: </label>
+        <input id="priority" type="number" maxlength="1" />
+        <label for="description">Description: </label>
+        <input id="description" type="text" maxlength="200" />
+        <label for="due">Due: </label>
+        <input id="due" type="date" />
+      </div>
     </div>
   </body>
 </html>
