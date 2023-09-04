@@ -15,4 +15,4 @@ Manipulate a nested JSON stucture purely with client side scripting.
     CTRL-SHFT-X
 #### Dropbox authorization URL
     https://www.dropbox.com/oauth2/authorize?client_id=0jblm44r25b76xf&redirect_uri=http://localhost:3000/&response_type=code
-    https://www.dropbox.com/oauth2/authorize?client_id=0jblm44r25b76xf/&response_type=code
+    https://www.dropbox.com/oauth2/authorize?client_id=0jblm44r25b76xf&response_type=code
