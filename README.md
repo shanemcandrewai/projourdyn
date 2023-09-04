@@ -16,3 +16,5 @@ Manipulate a nested JSON stucture purely with client side scripting.
 #### Dropbox authorization URL
     https://www.dropbox.com/oauth2/authorize?client_id=0jblm44r25b76xf&redirect_uri=http://localhost:3000/&response_type=code
     https://www.dropbox.com/oauth2/authorize?client_id=0jblm44r25b76xf&response_type=code
+#### Disable the Same-origin policy
+    chrome.exe --user-data-dir="C:/Users/xxx/Documents/repos/projourdyn/temp" --disable-web-security
