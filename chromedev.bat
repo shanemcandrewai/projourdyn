@@ -1,0 +1,1 @@
+start chrome.exe --user-data-dir="C:/Users/x032904/Documents/repos/projourdyn/temp" --disable-web-security
